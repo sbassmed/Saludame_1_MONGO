@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  var nombre = req.query.name;
-  if(!nombre || nombre === 0){
-    nombre = "desconocido";
+  let name = req.query.nombre;
+  if(!name || name === 0){
+    name = "desconocido";
   }
   else{
-    res.send(`<h1>Hola ${nombre}!</h1>`);
+    res.send(`<h1>Hola ${name}!</h1>`);
 
   }
 
